@@ -29,10 +29,10 @@ jobs:
           run: npm install
     
         - name: Unit Testing
-          if: always()
           run: npm test
           
         - name: Archive Test Result
+          if: always()
           uses: actions/upload-artifact@v3
           with:
             name: Mocha-Test-Result
