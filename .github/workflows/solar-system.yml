@@ -29,6 +29,7 @@ jobs:
           run: npm install
     
         - name: Unit Testing
+          if: always()
           run: npm test
           
         - name: Archive Test Result
