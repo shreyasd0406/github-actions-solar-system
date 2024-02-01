@@ -99,6 +99,12 @@ jobs:
         - name: Install Kubectl 
           uses: azure/setup-kubectl@v3
           with:
-           version: '1.26.0' # default is latest stable
+           version: 'v1.26.0' # default is latest stable
+
+        - name: Details of Cluster
+          run:
+             kubectl get nodes 
+             echo ---------------------------------------------------------------
+             kubectl version --short
     
     
