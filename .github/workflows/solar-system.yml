@@ -114,9 +114,7 @@ jobs:
             kubeconfig: '${{ secrets.KUBECONFIG }}'
 
         - name: Details of Cluster
-          run: |
-             kubectl get nodes 
-             echo ---------------------------------------------------------------
-             kubectl version --short
+          run:
+             kubectl version --short -o yaml
     
     
